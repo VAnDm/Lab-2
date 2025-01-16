@@ -54,8 +54,9 @@ def task3(books):
         numbers.add(x)
     for i in numbers:
         # формат даты поступления - DD.MM.YYYY HH:MM
-        year = books[i][4][5:9]
+        year = books[i][6][6:10]
         string = f"{books[i][3]}. {books[i][1]} - {year}\n"
+        #print(string)
         output.write(string)
     output.close()
 
