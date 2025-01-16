@@ -67,9 +67,9 @@ def additional_task(books):
     """
     tags = set()
     for i in books:
-        data = i[12].sep('# ')
+        data = i[12].split('# ')
         # удалим хештег перед первым тегом
-        data[0] = data[1::]
+        data[0] = data[0][1::]
         for tag in data:
             tags.add(tag)
     tags_list = list(tags)
