@@ -60,7 +60,7 @@ def task3(books):
         output.write(string)
     output.close()
 
-def additional_task(books):
+def additional_task1(books):
     """
     Функция выводит все теги в алфавитном порядке
     Каждый тег выводится в своей строке
@@ -77,6 +77,15 @@ def additional_task(books):
     for tag in tags_list:
         print(tag)
 
+def additional_task2(books):
+    """
+    Функция выводит 20 самых популярных книг
+    """
+    books.sort(key = lambda x: int(x[8]))
+    books = books[::-1]
+    for i in range(20):
+        print(books[i])
+
 def main(n, books):
     """
     Функция определяет выполняемую задачу
@@ -87,9 +96,10 @@ def main(n, books):
         task2(books)
     elif n == 3:
         task3(books)
-    else:
-        additional_task(books)
-
+    elif n == 4:
+        additional_task1(books)
+    elif n == 5:
+        additional_task2(books)
 
 if __name__ == "__main__":
     books = read_csvfile()
