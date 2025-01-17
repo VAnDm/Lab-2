@@ -28,3 +28,4 @@ currency_dict_list = []
 for i in currency_dict:
     currency_dict_list.append((i, currency_dict[i]))
 print(*currency_dict_list)
+xml_file.close()
